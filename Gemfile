@@ -15,6 +15,8 @@ gem 'sass-rails', '~> 5.0'
 
 gem 'jquery-rails'
 
+gem 'carrierwave', '~> 1.0'
+
 gem 'simple_form'
 
 gem 'devise'

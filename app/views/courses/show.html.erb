@@ -2,10 +2,13 @@
 
 <div class="booyah-box box-10 offset-1">
 	<h1><%= @course.title %></h1>
+	<% if @course.image.url %>
+		<%= image_tag @course.image.url, class: 'img-fluid' %>
+	<% end %>
 	<br />
 	<div class="row">
 		<div class="col-sm-4 col-12" >
-			<span class="badge badge-default">
+			<span class="badge badge-default text-center">
 				<%= number_to_currency @course.cost %>
 			</span>
 
@@ -23,16 +26,26 @@
 
 	<div class="col-12">
 		<% @course.sections.each do |section| %>
-		<div class="section">
+		<br /><br />
+		<div class="section">			
+			<h3>
 			<%= section.title %>
-			<% section.lessons.each do |lesson| %>
-			<div class="lesson">
-				<%= link_to lesson_path(lesson) do %>
-				<b><%= lesson.title %></b>
-				-
-				<%=lesson.subtitle %>
-			</div>
+			</h3>
+			<div class="row">
+				<% section.lessons.each do |lesson| %>
+					<div class="col-12 col-sm-6">
+						<div class="lesson text-center">
+							<br />
+							<%= link_to lesson_path(lesson) do %>
+							<b><%= lesson.title %></b>
+							-
+							<%=lesson.subtitle %>
+							<% end %>
+						</div>
+					</div>
 			<% end %>
+			</div>
+			<br class="clr" />
 		</div>
 		<% end %>
 	</div>
