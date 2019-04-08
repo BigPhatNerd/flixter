@@ -15,7 +15,11 @@ gem 'sass-rails', '~> 5.0'
 
 gem 'jquery-rails'
 
+gem 'figaro'
+
 gem 'carrierwave', '~> 1.0'
+
+gem "fog-aws"
 
 gem 'simple_form'
 
