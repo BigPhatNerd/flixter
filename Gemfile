@@ -15,6 +15,8 @@ gem 'sass-rails', '~> 5.0'
 
 gem 'jquery-rails'
 
+gem 'mini_magick'
+
 gem 'figaro'
 
 gem 'carrierwave', '~> 1.0'
