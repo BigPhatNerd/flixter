@@ -17,11 +17,15 @@ gem 'jquery-rails'
 
 gem 'mini_magick'
 
-gem 'figaro'
+gem 'carrierwave-aws'
 
 gem 'carrierwave', '~> 1.0'
 
-gem "fog-aws"
+gem 'figaro'
+
+
+gem 'fog-aws'
+
 
 gem 'simple_form'
 
