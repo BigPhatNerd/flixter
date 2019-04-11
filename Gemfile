@@ -15,9 +15,13 @@ gem 'sass-rails', '~> 5.0'
 
 gem 'jquery-rails'
 
+gem 'jquery-ui-rails'
+
 gem 'stripe'
 
 gem 'mini_magick'
+
+gem 'ranked-model'
 
 gem 'carrierwave-aws'
 
