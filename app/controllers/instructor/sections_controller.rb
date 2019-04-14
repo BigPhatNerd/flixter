@@ -40,8 +40,7 @@ def new
   def current_course
     @current_course ||= Course.find(params[:course_id])
   end
-else
-  current_section.course
+
 
   def section_params
     params.require(:section).permit(:title, :row_order_position)
