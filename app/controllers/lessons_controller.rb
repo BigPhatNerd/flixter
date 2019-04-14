@@ -14,8 +14,6 @@ class LessonsController < ApplicationController
 		end
 	end
 
-	def update
-	end
 
 	private
 
