@@ -1,116 +1,116 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Flixter</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<head>
+  <title>Flixter</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-<link href="http://vjs.zencdn.net/5.12.6/video-js.css" rel="stylesheet">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <link href="http://vjs.zencdn.net/5.12.6/video-js.css" rel="stylesheet">
 
-  </head>
+</head>
 
-  <body>
-    <div id="flex-content-container">
-<nav class="navbar navbar-inverse bg-inverse">
-  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <%= link_to 'Flixter', root_path, class: 'navbar-brand' %>
+<body>
+  <div id="flex-content-container">
+    <nav class="navbar navbar-inverse bg-inverse">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <%= link_to 'Flixter', root_path, class: 'navbar-brand' %>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
 
-      <li class="nav-item">
-        <%= link_to 'See all courses', courses_path, class: 'nav-link' %>
-      </li>
-      <ul class="navbar-nav">
-      <% if user_signed_in? %>
-      <li class="nav-item">
-        <%= link_to 'My Dashboard', dashboard_path, class: 'nav-link' %>
-      <li class="nav-item">
-        <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'nav-link' %>
-      </li>
-      <% else %>
-      <li class="nav-item">
-        <%= link_to 'Sign in', new_user_session_path, class: 'nav-link' %>
-      </li>
-      
-      <li class="nav-item">
-        <%= link_to 'Sign up', new_user_registration_path, class: 'nav-link' %>
-        
-      </li>
-      <% end %>
-    </ul>
-    
-  </div>
-</nav>
-<!-- Devise -->
-<% if notice.present? %>
-  <p class="alert alert-info"><%= notice %></p>
-  <% end %>
-  <% if alert.present? %>
-       <p class="alert alert-danger"><%= alert %></p>
-       <% end %>
-
-
-
-    <%= yield %>
-  </div>
-
-  <div id="footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-12 col-sm-3">
-      <b>Teachers</b>
-      <br />
-    <div class="links">  <%= link_to 'Teach a Course', new_instructor_course_path %>
-      <br /> 
-      <%= link_to 'My Dashboard', dashboard_path %>
-    </div>
-    </div>
-    <div class="col-12 col-sm-3">
-      <b>About</b>
-      <br />
-      <%= link_to 'Team', team_path %>
-      <br />
-      <%= link_to 'Careers', careers_path %>
-      <br />
-      <%= link_to 'Privacy Policy', privacy_path %>
-  </div>
-  <div class="col-12 col-sm-3">
-    <b>Contact</b>
-    <br />
-    wilsonhorrell@gmail.com
-    <br />
-    2274 Pigeon Roost Rd.
-    <br />
-    Byhalia, MS 38611
-  </div>
-  <div class="col-12 col-sm-3 social">
-    <b>Social</b>
-    <br />
-    <br />
-    <%= link_to 'https://github.com/alwaysconfused1' do %>
-    <span class="fa fa-github-square fa-2x social-button"></span>
-    <% end %>
-    <%= link_to 'https://www.facebook.com/wilson.horrell' do %>
-    <span class="fa fa-facebook-square fa-2x social-button"></span>
-    <% end %>
-    <%= link_to 'https://twitter.com/liftrunlong' do %>
-    <span class="fa fa-twitter-square fa-2x social-button"></span>
-    <% end %>
-  
-  </div>
-</div>
-</div>
-</div>
-  <script src="http://vjs.zencdn.net/5.12.6/video.js"></script>
-    <script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
-</body>
+          <li class="nav-item">
+            <%= link_to 'See all courses', courses_path, class: 'nav-link' %>
+          </li>
+          <ul class="navbar-nav">
+            <% if user_signed_in? %>
+            <li class="nav-item">
+              <%= link_to 'My Dashboard', dashboard_path, class: 'nav-link' %>
+              <li class="nav-item">
+                <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'nav-link' %>
+              </li>
+              <% else %>
+              <li class="nav-item">
+                <%= link_to 'Sign in', new_user_session_path, class: 'nav-link' %>
+              </li>
+              
+              <li class="nav-item">
+                <%= link_to 'Sign up', new_user_registration_path, class: 'nav-link' %>
+                
+              </li>
+              <% end %>
+            </ul>
+            
+          </div>
+        </nav>
+        <!-- Devise -->
+        <% if notice.present? %>
+        <p class="alert alert-info"><%= notice %></p>
+        <% end %>
+        <% if alert.present? %>
+        <p class="alert alert-danger"><%= alert %></p>
+        <% end %>
 
 
 
+        <%= yield %>
+      </div>
 
-</html>
+      <div id="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-sm-3">
+              <b>Teachers</b>
+              <br />
+              <div class="links">  <%= link_to 'Teach a Course', new_instructor_course_path %>
+                <br /> 
+                <%= link_to 'My Dashboard', dashboard_path %>
+              </div>
+            </div>
+            <div class="col-12 col-sm-3">
+              <b>About</b>
+              <br />
+              <%= link_to 'Team', team_path %>
+              <br />
+              <%= link_to 'Careers', careers_path %>
+              <br />
+              <%= link_to 'Privacy Policy', privacy_path %>
+            </div>
+            <div class="col-12 col-sm-3">
+              <b>Contact</b>
+              <br />
+              wilsonhorrell@gmail.com
+              <br />
+              2274 Pigeon Roost Rd.
+              <br />
+              Byhalia, MS 38611
+            </div>
+            <div class="col-12 col-sm-3 social">
+              <b>Social</b>
+              <br />
+              <br />
+              <%= link_to 'https://github.com/alwaysconfused1' do %>
+              <span class="fa fa-github-square fa-2x social-button"></span>
+              <% end %>
+              <%= link_to 'https://www.facebook.com/wilson.horrell' do %>
+              <span class="fa fa-facebook-square fa-2x social-button"></span>
+              <% end %>
+              <%= link_to 'https://twitter.com/liftrunlong' do %>
+              <span class="fa fa-twitter-square fa-2x social-button"></span>
+              <% end %>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="http://vjs.zencdn.net/5.12.6/video.js"></script>
+      <script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+    </body>
+
+
+
+
+    </html>
