@@ -15,6 +15,8 @@ gem 'sass-rails', '~> 5.0'
 
 gem 'jquery-rails'
 
+gem 'ruby-beautify', '~> 0.97.4'
+
 gem 'jquery-ui-rails'
 
 gem 'font-awesome-rails'

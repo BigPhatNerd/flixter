@@ -1,8 +1,16 @@
 class StaticPagesController < ApplicationController
-before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+#before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
 
 
-def index
-end
+	def index
+	end
+	
+	def privacy
+	end
 
+	def team
+	end
+
+	def careers
+	end
 end

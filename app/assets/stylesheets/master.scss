@@ -7,13 +7,15 @@
   background: image_url('dark_wood.png');
   font-family: 'Anton', sans-serif;
   font-weight: 200;
-
   box-shadow: 0px 10x 3px #2a2a2a;
+
+ 
 }
 
 .navbar-inverse .navbar-brand {
 font-family: 'Anton', sans-serif;
 font-weight: 100;
+color: #bcc2c1;
 }
 
 body {
@@ -37,6 +39,7 @@ h1, h2, h3, h4, h5, h6, .navbar {
   padding-top: 10px;
 }
 
+
 .frosty {
   background: rgba(0, 0, 0, 0.5);
   color: white;
@@ -58,6 +61,14 @@ h1, h2, h3, h4, h5, h6, .navbar {
 .btn {
   border-color: #FB0303;
   background-color: black;
+  color: white;
+}
+
+
+.btn:hover {
+  
+  background-color: #8C0000;
+  border: red;
   color: white;
 
 }
@@ -83,6 +94,13 @@ h1, h2, h3, h4, h5, h6, .navbar {
 
 .booyah-box h2, .booyah-box h1 {
   margin: 10px;
+}
+
+.link {
+  color: #8C0000;
+}
+.link:hover {
+  color:black;
 }
 
 .help-block {
@@ -161,3 +179,12 @@ ul .header .fa {
 .social a:hover {
   text-decoration: none;
 }
+
+.links {
+  color: red;
+}
+
+.header {
+  font-size: 20px;
+}
+
